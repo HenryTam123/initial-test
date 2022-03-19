@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.custom-price-font{
+  font-family: NeutraText-BookItalic,MicrosoftJhengHeiRegular,Arial,Helvetica,sans-serif;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.web-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button{
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.custom-add-to-cart-btn{
+  background-color: black;
+  color: white;
+  transition: 0.15s ease-in;
+}
+
+.custom-add-to-cart-btn:hover{
+  background-color: #c7a67a;
+}
+
+.custom-view-detail-btn{
+  background-color: white;
+  display:inline-block;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-left: 20px;
+}
+
+.custom-view-detail-btn:hover{
+  border-bottom: 2px solid #c7a67a;
+  color:#c7a67a
+}
+
+.custom-listing-container{
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.custom-product-container{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 23%;
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
+}
+
+.custom-heart-btn{
+  position: absolute;
+  top:5%;
+  right:5%;
+  height: 25px;
+  cursor: pointer;
+}
+
+.custom-product-title{
+   transition: color .15s ease;
+   cursor: pointer;
+
+}
+
+.custom-product-title:hover{
+  color: grey;
+}
+
+.custom-product-container > div{
+  margin-top: 20px;
+}
+
+.custom-product-description {
+  text-overflow:ellipsis;
+  overflow:hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  height: 60px;
+}
+
+.custom-star{
+  height: 20px;
+}
+
+.custom-product-image{
+  object-fit: cover;
+  width: 100%;
+  cursor: pointer;
+}
+
+.custom-footer{
+  background-color: black;
+  width: 100%;
+  margin-top: 40px;
+  padding: 30px 0px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.custom-footer-container{
+  max-width: 1200px;
+  display: flex;
   color: white;
+  width: 100%;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.custom-footer-container .first-row{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.custom-footer-container .second-row{
+  display: flex;
+  justify-content: space-between;
+  color: #cacaca;
+  margin: 0px 20px;
+}
+
+.custom-footer-container .second-row a {
+  margin: 0px 10px;
+  
+}
+
+.custom-footer-container h5{
+  margin: 20px 0px 40px 0px;
+}
+
+.custom-footer-container .first-row .custom-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-footer-container a{
+  color: #cacaca;
+  text-decoration: none;
+  margin: 3px 0px;
+}
+
+
+@media screen and (min-width: 200px ) and (max-width : 576px) {
+  .custom-view-detail-btn{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .custom-product-container{
+    width:45%;
+  }
+  .custom-footer-container .first-row{
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .custom-footer-container h5{
+    margin: 20px 0px;
+  }
+  .custom-footer-container .custom-col{
+    border-bottom: 1px solid #575757;
+    padding: 10px 0px;
+  }
+}
+
+@media screen and (min-width:576px) and (max-width : 767px) {
+  .custom-product-container{
+    width: 45%;
+  }
+  .custom-view-detail-btn{
+    display: none;
+  }
+  
+  .custom-footer-container .first-row{
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .custom-footer-container h5{
+    margin: 20px 0px;
+  }
+  .custom-footer-container .custom-col{
+    border-bottom: 1px solid #575757;
+    padding: 10px 0px;
+  }
+}
+
+@media screen and (min-width : 768px) and (max-width : 992px) {
+  .custom-product-container{
+    width: 30%;
+  }
+  .custom-view-detail-btn{
+    display: none;
   }
 }
